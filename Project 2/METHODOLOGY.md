@@ -29,7 +29,7 @@ Sample: **Jan 1974 - Dec 2018**, 2,006,414 stock-months, 16,801 stocks, 540 mont
 | 30/70 breakpoints, value-weighted, all stocks | Mirrors Fama-French style factors. Value weights limit micro-cap influence. |
 | Winsorize next-month returns at 1/99, by month | Controls extreme returns (max was +1,900%). About 40,300 observations changed. |
 | Market leverage not winsorized | Bounded in [0,1] and only used for ranking, so clipping would change no portfolio. Book leverage (max 855) is clipped at the 99th percentile. |
-| Sample ends 2018 | Zero-debt share falls from about 19% to 6% in 2019Q1 because lease liabilities (ASC 842) appear to enter reported debt. The series is not comparable across 2019. |
+| Main sample ends 2018 | Zero-debt share falls from about 20% to 8% in one quarter (2019Q1) because lease liabilities (ASC 842) appear to enter reported debt. The series is not comparable across 2019. 2019-2025 is used only as a sensitivity test. |
 | Expected return = average realized return | Expected returns are not observable. Premium = sample mean of the monthly factor, tested with a t-stat. |
 | OLS with Newey-West t-stats (6 lags), written in numpy | Corrects for autocorrelation and heteroskedasticity. `statsmodels` does not import in this environment. |
 | Test assets: 25 portfolios (5 size x 5 leverage) | Standard two-way sort. Caveat: sorted on leverage, so LEV partly explains them by construction. |
@@ -40,7 +40,7 @@ Cleaning counts for every step are printed in the notebook (Compustat: 1,215,146
 1. Factor premium: mean monthly return and t-stat.
 2. Is LEV spanned? LEV regressed on CAPM, FF3 and FF4 (the alpha is the question).
 3. 25 test portfolios on market + LEV (requirement 5), and on CAPM, FF3, FF4, CAPM+LEV and FF4+LEV (requirement 6, by R-squared).
-4. Sensitivity (requirement 7): quintiles, terciles, equal weights, book leverage, no winsorizing, 1974-95, 1996-2018, excluding 2007-09. Each reports premium, FF4 alpha and added R-squared.
+4. Sensitivity (requirement 7): quintiles, terciles, equal weights, book leverage, no winsorizing, 1974-95, 1996-2018, 1981-2018, excluding 2007-09, the full 1974-2025 sample and 2019-2025 alone. Each reports premium, FF4 alpha and added R-squared.
 5. Bad times and stress test: LEV return in NBER recessions (pooled and each episode separately), down-market months and the worst 10% of market months.
 6. Charts: growth of $1 for LEV vs HML, LEV factor loadings, LEV return by market state, and average return by leverage quintile (`fig1_lev_vs_hml.png`, `fig2_bad_times_quintiles.png`).
 
@@ -48,7 +48,8 @@ Cleaning counts for every step are printed in the notebook (Compustat: 1,215,146
 - **No premium:** +0.08% per month (about 0.9% a year), t = 0.37.
 - **LEV overlaps heavily with value:** loads +1.02 on HML (t = 13.3), -0.21 on UMD, -0.10 on the market, none on SMB. FF4 alpha is -0.04% (t = -0.37). LEV and HML have a monthly correlation of 0.77, although their cumulative paths diverge after about 1990 (see Figure 1).
 - **Little added explanatory power:** average R-squared across the 25 portfolios goes from 0.842 (FF4) to 0.853 (FF4+LEV). In market-plus-LEV regressions LEV is significant in 17 of 25 portfolios.
-- **Not robust:** the premium changes sign across subperiods and weighting schemes and is never significant. Added R-squared stays at about 1 point in every specification. The only significant number is the book-leverage FF4 alpha (-0.30%, t = -2.6), one result out of nine.
+- **Not robust:** the premium changes sign across subperiods and weighting schemes and is never significant. Added R-squared stays at about 1 point in every specification. The only significant number is the book-leverage FF4 alpha (-0.30%, t = -2.6), one result out of thirteen.
+- **Extended to 2025:** the full 1974-2025 sample gives a mean of -0.03% per month (t = -0.16) and FF4 alpha -0.09% (t = -0.87). The 84 months of 2019-2025 alone give -0.71% (t = -1.13) and alpha -0.42% (t = -1.33), still insignificant, and LEV still loads +0.95 on HML. The conclusion does not depend on the 2018 cutoff, though the accounting break cannot be separated from the weak value period.
 - **Bad times:** LEV earns +0.02% per month in recessions, +1.39% in down-market months and +2.79% in the worst 10% of market months. The recession sign differs by episode (positive 1974-75, negative 1980, 1990-91 and 2001, flat 2007-09), so there is no consistent bad-times loss that would justify a risk premium, and no consistent hedge either.
 
 ## 6. Conclusion
@@ -66,7 +67,7 @@ Market leverage is not a separately priced factor. Its return is explained by ex
 | 4 Cleaning, winsorizing, counts | Done. Missing, duplicate and outlier handling are logged. |
 | 5 OLS on factor + market | Done (loadings, t-stats, R-squared for all 25 portfolios). |
 | 6 Compare to benchmark | Done. The comparison is by R-squared. There is no formal test of the increase (e.g. GRS). |
-| 7 Sensitivity | Done, with 9 specifications. |
+| 7 Sensitivity | Done, with 13 specifications (including the full sample and 2019-2025). |
 | 8 Rational vs behavioral | Evidence done. **Group should link it to the specific theories from class.** |
 | 9 Market efficiency | Drafted above. **Group should write it in the course's terms.** |
 
@@ -74,7 +75,7 @@ Market leverage is not a separately priced factor. Its return is explained by ex
 - Leverage uses current market equity, so it partly proxies for past returns (value and momentum).
 - The 25 test portfolios are sorted on leverage, which flatters LEV's explanatory power.
 - Breakpoints use all stocks (not NYSE-only), so micro-caps affect the breakpoints.
-- Nine sensitivity specifications means one significant result is weak evidence.
+- Thirteen sensitivity specifications means one significant result is weak evidence.
 - Compustat debt is book value. It is not comparable across 2019, so results do not cover 2019-2025.
 
 ## 9. Fixes made while auditing the work
