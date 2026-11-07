@@ -107,7 +107,7 @@ B's inference tests ran on event-centred windows; the merged notebook runs them 
 | GFC − rates, changes (p) | 0.81 (**0.03**) | 0.75 (**0.10**) |
 | Pooled liquidity slopes, changes: GFC / COVID / rates; Wald p | 0.034 / −0.033 / −0.007; 0.136 | 0.028 / −0.018 / −0.008; 0.196 |
 | Pooled, levels with episode fixed effects; Wald p | 0.050 / −0.041 / −0.009; < 0.001 | 0.049 / 0.001 / −0.017; < 0.001 |
-| Rank among all 466 rolling 24-month windows, levels / changes | GFC 96th / 97th; COVID 12th / 74th; rates 2nd / 30th | GFC 93rd / 94th; COVID 54th / 59th; rates 0th / 37th |
+| Rank among all 466 rolling 24-month windows, levels / changes | GFC 96th / 97th; COVID 12th / 74th; rates 2nd / 30th | GFC 93rd / 94th; COVID 54th / 60th; rates 0th / 37th |
 
 Reading: in **levels** the result is robust to the window (2008 significantly stronger than both later episodes). In **monthly changes** the evidence is weak either way (23 observations); B's one borderline-significant result (rate shock, p = 0.03) becomes p = 0.10 on calendar windows, so the merged text says "strong in levels, suggestive in changes". COVID's levels correlation is near zero on the calendar window and negative on the event-centred one; across all five window definitions it ranges from −0.44 to +0.55, never near 0.9.
 
@@ -214,3 +214,16 @@ Net effect: 898 lines of code against 1,157 for the two notebooks together (and 
 * The puzzle's loss and recovery inputs come from the lecture slides, not raw Moody's data; the liquidity-share numbers are accounting bounds, not causal estimates.
 * Nothing has been committed to git.
 * Still to do for the course: the 3-page report, slides, and a clean-start run by the group member who did not write the code.
+
+## 11. Calendar and baseline corrections after review
+
+The merged notebook was corrected and re-executed on November 7, 2026. The two notebooks in `neha/` remain historical process artifacts; their values above describe those saved versions.
+
+| Correction | Current merged result |
+|---|---|
+| Restore excluded months as missing before calculating sub-period changes, requiring two consecutive retained months | Excluding 2007–09 retains 453 levels and 451 monthly changes; change correlation is 0.0505 instead of 0.0657. The December 2006–January 2010 jump is excluded. |
+| Use 23 within-window changes for every rolling 24-month level window | Rolling episode change correlations now match the main episode table: 0.6916 / 0.0979 / −0.0555. Both rolling series cover 466 windows. |
+| Drop missing values only from the credit/liquidity pair when calculating ledger changes | 1986–87 and 1988–89 each have 23 valid changes, with correlations −0.1318 and 0.2500. Missing VIX does not remove those observations. |
+| Use the calendar month before each event as the daily peak baseline | August 2008 / February 2020 / February 2022, with baseline month, mean and observation count exported. COVID TED's daily peak is 8.76 times February's mean; the separate monthly February–March increase remains about five-fold. |
+
+All 34 code cells ran in a fresh Jupyter kernel under Python 3.14.6 with the pinned numerical packages. Existing assertions and the new calendar-gap, rolling-window, pre-1990 and baseline checks passed. Of the 20 CSV outputs, only `table_subperiods.csv`, `table_two_year_ledger.csv` and `table_daily_event_study.csv` changed numerically or in schema; all other CSV values agree within 1e-10. The main episode and full-sample regression tables are unchanged. Notebook explanations and saved outputs were refreshed with the corrected results.

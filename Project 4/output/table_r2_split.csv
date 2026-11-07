@@ -1,8 +1,8 @@
 ,share of variance
 R² liquidity alone,0.2249430300403107
-R² VIX alone,0.42107109315072166
-R² both,0.45950737025638244
-unique to liquidity (C − B),0.03843627710566078
-unique to VIX (C − A),0.23456434021607175
-shared (A + B − C),0.1865067529346499
-unexplained (1 − C),0.5404926297436176
+R² VIX alone,0.42107109315072155
+R² both,0.45950737025638255
+unique to liquidity (C − B),0.038436277105661
+unique to VIX (C − A),0.23456434021607186
+shared (A + B − C),0.1865067529346497
+unexplained (1 − C),0.5404926297436174

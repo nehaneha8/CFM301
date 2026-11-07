@@ -13,6 +13,8 @@ python -m jupyter nbconvert --to notebook --execute --inplace Project4_Merged.ip
 ```
 Or open `Project4_Merged.ipynb` and **Restart Kernel and Run All**. Run it from this folder (all paths are relative: `data/`, `output/`). No internet, no WRDS, no manual steps. Verified: the notebook plus `data/` copied to an empty folder reproduces every CSV in `output/` byte-for-byte.
 
+The November 7, 2026 validation ran all 34 code cells in a fresh kernel under Python 3.14.6 with the pinned numerical packages. Checks cover excluded calendar months, 23 within-window changes per 24-month window, valid pre-1990 credit/liquidity observations, and calendar-month baselines for daily peaks. See `MERGE.md`, Section 11, for the corrections and resulting values.
+
 ## Files
 | Path | Purpose |
 |---|---|
@@ -20,11 +22,6 @@ Or open `Project4_Merged.ipynb` and **Restart Kernel and Run All**. Run it from 
 | `data/` | **The only data folder**: the 12 inputs the notebook reads (below) |
 | `output/` | Tables (`.csv`) and figures (`.png`) written by the added analyses |
 | `requirements.txt` | Pinned package versions |
-| `MERGE.md` | What was kept from each version, data and result differences, what matched, verification |
-| `00_fetch_fred.py` | Documentation only: how the FRED CSVs were downloaded (needs internet; refreshing would change the vintage) |
-| `extract_slide59.py` | One-off helper that created `data/slide59_cached_series.csv` from the lecture pptx |
-| `CFM301_Project4_Credit_Spread_Liquidity_v2.pdf`, `Ch 9 Bonds.pptx` | Assignment and lecture slides (reading material) |
-| `CLAUDE.md` | Handoff notes for working on the project |
 | `neha/` | Artifacts: our independent notebook, the classmate's original, their outputs |
 
 ## Data in `data/`
