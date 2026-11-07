@@ -1,0 +1,106 @@
+dataset,step,affected,remaining_rows,note
+BAA,Exact duplicate rows removed,0,1294,
+BAA,Invalid dates (stop if nonzero),0,1294,
+BAA,BAA: unexpected nonnumeric cells,0,1294,
+BAA,Rows with conflicting duplicate dates (stop if nonzero),0,1294,
+BAA,Missing numeric cells retained,0,1294,No imputation. Missing values are excluded only where an analysis requires them.
+GS10,Exact duplicate rows removed,0,883,
+GS10,Invalid dates (stop if nonzero),0,883,
+GS10,GS10: unexpected nonnumeric cells,0,883,
+GS10,Rows with conflicting duplicate dates (stop if nonzero),0,883,
+GS10,Missing numeric cells retained,0,883,No imputation. Missing values are excluded only where an analysis requires them.
+VIXCLS,Exact duplicate rows removed,0,9613,
+VIXCLS,Invalid dates (stop if nonzero),0,9613,
+VIXCLS,VIXCLS: unexpected nonnumeric cells,0,9613,
+VIXCLS,Rows with conflicting duplicate dates (stop if nonzero),0,9613,
+VIXCLS,Missing numeric cells retained,302,9613,No imputation. Missing values are excluded only where an analysis requires them.
+VXOCLS,Exact duplicate rows removed,0,9321,
+VXOCLS,Invalid dates (stop if nonzero),0,9321,
+VXOCLS,VXOCLS: unexpected nonnumeric cells,0,9321,
+VXOCLS,Rows with conflicting duplicate dates (stop if nonzero),0,9321,
+VXOCLS,Missing numeric cells retained,319,9321,No imputation. Missing values are excluded only where an analysis requires them.
+TEDRATE,Exact duplicate rows removed,0,9407,
+TEDRATE,Invalid dates (stop if nonzero),0,9407,
+TEDRATE,TEDRATE: unexpected nonnumeric cells,0,9407,
+TEDRATE,Rows with conflicting duplicate dates (stop if nonzero),0,9407,
+TEDRATE,Missing numeric cells retained,554,9407,No imputation. Missing values are excluded only where an analysis requires them.
+DBAA,Exact duplicate rows removed,0,10655,
+DBAA,Invalid dates (stop if nonzero),0,10655,
+DBAA,DBAA: unexpected nonnumeric cells,0,10655,
+DBAA,Rows with conflicting duplicate dates (stop if nonzero),0,10655,
+DBAA,Missing numeric cells retained,408,10655,No imputation. Missing values are excluded only where an analysis requires them.
+DGS10,Exact duplicate rows removed,0,16917,
+DGS10,Invalid dates (stop if nonzero),0,16917,
+DGS10,DGS10: unexpected nonnumeric cells,0,16917,
+DGS10,Rows with conflicting duplicate dates (stop if nonzero),0,16917,
+DGS10,Missing numeric cells retained,721,16917,No imputation. Missing values are excluded only where an analysis requires them.
+DGS20,Exact duplicate rows removed,0,16917,
+DGS20,Invalid dates (stop if nonzero),0,16917,
+DGS20,DGS20: unexpected nonnumeric cells,0,16917,
+DGS20,Rows with conflicting duplicate dates (stop if nonzero),0,16917,
+DGS20,Missing numeric cells retained,2410,16917,No imputation. Missing values are excluded only where an analysis requires them.
+DGS30,Exact duplicate rows removed,0,12972,
+DGS30,Invalid dates (stop if nonzero),0,12972,
+DGS30,DGS30: unexpected nonnumeric cells,0,12972,
+DGS30,Rows with conflicting duplicate dates (stop if nonzero),0,12972,
+DGS30,Missing numeric cells retained,546,12972,No imputation. Missing values are excluded only where an analysis requires them.
+TNC off-the-run,Header/spacer rows excluded,6,609,Non-observation rows
+TNC off-the-run,Exact duplicate rows removed,0,609,
+TNC off-the-run,Invalid dates (stop if nonzero),0,609,
+TNC off-the-run,2 Years: unexpected nonnumeric cells,0,609,
+TNC off-the-run,3 Years: unexpected nonnumeric cells,0,609,
+TNC off-the-run,5 Years: unexpected nonnumeric cells,0,609,
+TNC off-the-run,7 Years: unexpected nonnumeric cells,0,609,
+TNC off-the-run,10 Years: unexpected nonnumeric cells,0,609,
+TNC off-the-run,20 Years: unexpected nonnumeric cells,0,609,
+TNC off-the-run,30 Years: unexpected nonnumeric cells,0,609,
+TNC off-the-run,Rows with conflicting duplicate dates (stop if nonzero),0,609,
+TNC off-the-run,Missing numeric cells retained,0,609,No imputation. Missing values are excluded only where an analysis requires them.
+TNC on-the-run,Header/spacer rows excluded,6,489,Non-observation rows
+TNC on-the-run,Exact duplicate rows removed,0,489,
+TNC on-the-run,Invalid dates (stop if nonzero),0,489,
+TNC on-the-run,2 Years: unexpected nonnumeric cells,0,489,
+TNC on-the-run,5 Years: unexpected nonnumeric cells,0,489,
+TNC on-the-run,10 Years: unexpected nonnumeric cells,0,489,
+TNC on-the-run,Rows with conflicting duplicate dates (stop if nonzero),0,489,
+TNC on-the-run,Missing numeric cells retained,0,489,No imputation. Missing values are excluded only where an analysis requires them.
+BAA,Absent calendar months inserted as missing,0,1294,
+GS10,Absent calendar months inserted as missing,0,883,
+TNC off-the-run,Absent calendar months inserted as missing,0,609,
+TNC on-the-run,Absent calendar months inserted as missing,0,489,
+VIXCLS,Blank daily values excluded from monthly means,302,443,Daily rows affected; no values filled
+VIXCLS,Unfinished/future calendar months excluded,1,442,As of 2026-11-06; daily rows in these months: 4
+VXOCLS,Blank daily values excluded from monthly means,319,429,Daily rows affected; no values filled
+VXOCLS,Unfinished/future calendar months excluded,0,429,As of 2026-11-06; daily rows in these months: 0
+TEDRATE,Blank daily values excluded from monthly means,554,433,Daily rows affected; no values filled
+TEDRATE,Unfinished/future calendar months excluded,0,433,As of 2026-11-06; daily rows in these months: 0
+DBAA,Blank daily values excluded from monthly means,408,491,Daily rows affected; no values filled
+DBAA,Unfinished/future calendar months excluded,1,490,As of 2026-11-06; daily rows in these months: 3
+DGS10,Blank daily values excluded from monthly means,721,779,Daily rows affected; no values filled
+DGS10,Unfinished/future calendar months excluded,1,778,As of 2026-11-06; daily rows in these months: 3
+DGS20,Blank daily values excluded from monthly means,2410,779,Daily rows affected; no values filled
+DGS20,Unfinished/future calendar months excluded,1,778,As of 2026-11-06; daily rows in these months: 3
+DGS30,Blank daily values excluded from monthly means,546,598,Daily rows affected; no values filled
+DGS30,Unfinished/future calendar months excluded,1,597,As of 2026-11-06; daily rows in these months: 3
+DGS20,Calendar months with no 20-year CMT observation,81,778,"genuine gap 1987-01 to 1993-09; the main benchmark is the TNC 20-year yield, which has no gap"
+Extended chart,Months outside joint source coverage excluded,805,489,"Different histories, not deleted source records"
+Extended chart,Incomplete months inside overlap excluded,0,489,
+Regressions A-C,Months outside joint source coverage excluded,853,441,"Different histories, not deleted source records"
+Regressions A-C,Incomplete months inside overlap excluded,0,441,
+BAA,Monthly values beyond 4 SD flagged and retained,0,1294,
+GS10,Monthly values beyond 4 SD flagged and retained,0,883,
+vix,Monthly values beyond 4 SD flagged and retained,4,442,
+vxo,Monthly values beyond 4 SD flagged and retained,5,429,
+ted_bp,Monthly values beyond 4 SD flagged and retained,2,433,
+off_20 Years,Monthly values beyond 4 SD flagged and retained,0,609,
+off_10 Years,Monthly values beyond 4 SD flagged and retained,0,609,
+on_10 Years,Monthly values beyond 4 SD flagged and retained,0,489,
+credit_pp,Monthly values beyond 4 SD flagged and retained,7,609,
+credit10_pp,Monthly values beyond 4 SD flagged and retained,6,883,
+credit30_pp,Monthly values beyond 4 SD flagged and retained,7,609,
+liquidity_bp,Monthly values beyond 4 SD flagged and retained,4,489,
+All series,Observations winsorized or deleted as outliers,0,1294,Retain crisis signal and fitted negative liquidity premiums
+GFC 2008-09,Incomplete episode months excluded,0,24,
+COVID 2020-21,Incomplete episode months excluded,0,24,
+Rate shock 2022-23,Incomplete episode months excluded,0,24,
+daily panel,Days dropped: one of Baa / 10y CMT / VIX not observed (holiday mismatch),414,9174,

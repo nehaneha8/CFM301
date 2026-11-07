@@ -1,0 +1,12 @@
+,,GFC,GFC,COVID,COVID,Rates,Rates
+,,levels r,changes r,levels r,changes r,levels r,changes r
+varies,definition,,,,,,
+credit spread,Baa − 20y TNC (main; 10y gap),0.9331,0.6916,0.0845,0.0979,-0.6805,-0.0555
+credit spread,Baa − 10y TNC,0.9201,0.616,0.0772,0.0645,-0.8112,-0.3332
+credit spread,Baa − GS10,0.9384,0.6954,0.1379,0.1111,-0.7188,-0.1377
+credit spread,Baa − 30y TNC,0.9358,0.729,-0.0021,0.0702,-0.6323,-0.0098
+credit spread,Baa − 2y TNC,0.9056,0.7308,0.4016,0.3665,-0.3803,0.1676
+indicator,5y on/off-the-run gap,-0.0146,-0.0607,0.6038,0.6615,0.5065,0.2818
+indicator,2y on/off-the-run gap,-0.5151,-0.4415,-0.2298,-0.0209,0.3289,0.3146
+indicator,TED spread (funding liquidity),0.5325,0.5069,0.7507,0.7469,,
+indicator,VIX (general stress),0.907,0.7104,0.8769,0.8687,0.669,0.6487

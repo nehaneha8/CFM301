@@ -1,0 +1,32 @@
+series,step,obs affected,of total,note
+BAA,exact duplicate rows removed,0,1294,
+BAA,"blank / '.' entries dropped (holidays, no print)",0,1294,
+GS10,exact duplicate rows removed,0,883,
+GS10,"blank / '.' entries dropped (holidays, no print)",0,883,
+DBAA,exact duplicate rows removed,0,10655,
+DBAA,"blank / '.' entries dropped (holidays, no print)",408,10655,
+DGS10,exact duplicate rows removed,0,16917,
+DGS10,"blank / '.' entries dropped (holidays, no print)",721,16917,
+DGS20,exact duplicate rows removed,0,16917,
+DGS20,"blank / '.' entries dropped (holidays, no print)",2410,16917,
+DGS30,exact duplicate rows removed,0,12972,
+DGS30,"blank / '.' entries dropped (holidays, no print)",546,12972,
+VIXCLS,exact duplicate rows removed,0,9613,
+VIXCLS,"blank / '.' entries dropped (holidays, no print)",302,9613,
+VXOCLS,exact duplicate rows removed,0,9321,
+VXOCLS,"blank / '.' entries dropped (holidays, no print)",319,9321,
+TEDRATE,exact duplicate rows removed,0,9407,
+TEDRATE,"blank / '.' entries dropped (holidays, no print)",554,9407,
+tnc_qh_pars_1.xls,non-date / blank rows dropped,0,609,
+tnc_qh_pars_1.xls,duplicate months removed,0,609,
+tnc_qh_pars_1.xls,missing yields,0,4263,
+tnc_qh_otrpars.xls,non-date / blank rows dropped,0,489,
+tnc_qh_otrpars.xls,duplicate months removed,0,489,
+tnc_qh_otrpars.xls,missing yields,0,1467,
+alignment,months where the daily 20y CMT is unavailable (FRED DGS20 gap),81,489,"main analysis uses the TNC 20y yield, which has no gap"
+alignment,months dropped: Treasury data end Sep 2026 (BAA / daily files run to Oct-Nov 2026),1,1294,
+cs20,"flagged beyond 4 sd (kept, not winsorized)",7,489,crisis spikes are the signal
+liq10,"flagged beyond 4 sd (kept, not winsorized)",4,489,crisis spikes are the signal
+vix,"flagged beyond 4 sd (kept, not winsorized)",4,441,crisis spikes are the signal
+vxo,"flagged beyond 4 sd (kept, not winsorized)",5,429,crisis spikes are the signal
+ted,"flagged beyond 4 sd (kept, not winsorized)",2,433,crisis spikes are the signal

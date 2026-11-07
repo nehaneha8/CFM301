@@ -1,0 +1,6 @@
+,A: liquidity,B: VIX,C: both
+Intercept (pp),1.5345  (t = 50.4; HAC t = 15.1),0.7241  (t = 12.0; HAC t = 3.1),0.7903  (t = 13.2; HAC t = 4.4)
+Liquidity premium (per bp),0.0262  (t = 11.3; HAC t = 2.1),,0.0122  (t = 5.6; HAC t = 1.8)
+VIX (per point),,0.0520  (t = 17.9; HAC t = 4.0),0.0438  (t = 13.8; HAC t = 5.7)
+R-squared,0.225,0.421,0.460
+Observations,441,441,441

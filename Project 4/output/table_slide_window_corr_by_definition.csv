@@ -1,0 +1,6 @@
+Credit spread,N,Pearson r (10y gap),Difference from lecture 0.96,r with 5y gap,r with 2y gap
+Baa - 20-year TNC (main),45,0.967,0.007,0.1896,-0.6
+Baa - 10-year TNC,45,0.9692,0.0092,0.2197,-0.5385
+Baa - GS10 (maturity mismatch),45,0.9761,0.0161,0.2211,-0.5511
+Baa - 30-year TNC,45,0.9623,0.0023,0.1766,-0.6205
+Baa - 2-year TNC,45,0.9595,-0.0005,0.2512,-0.5114
