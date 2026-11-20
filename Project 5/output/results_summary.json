@@ -1,0 +1,23 @@
+{
+  "question": "Does an active mutual fund's fee remain justified when performance is evaluated against progressively more demanding benchmarks?",
+  "sample": "2016-01 to 2025-12",
+  "funds": [
+    "FBGRX",
+    "FDGRX",
+    "FOCPX",
+    "PRGFX",
+    "TRBCX"
+  ],
+  "nonnegative_alpha_counts": {
+    "CAPM": 4,
+    "FF3": 3,
+    "Carhart": 3,
+    "Index funds": 3
+  },
+  "persistence_rank_correlation": 0.9999999999999999,
+  "exact_monthly_class_TNA_flows_available": false,
+  "reported_monthly_series_flow_funds": [
+    "PRGFX",
+    "TRBCX"
+  ]
+}

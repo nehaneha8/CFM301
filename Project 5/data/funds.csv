@@ -1,0 +1,10 @@
+ticker,name,role,fiscal_month,cik,series_id,class_id,share_class,selection
+FBGRX,Fidelity Blue Chip Growth Fund,active,7,754510,S000007195,C000019693,retail / Investor,"Public-data growth case studies; selected for comparable mandate and source coverage, not estimated alpha"
+FDGRX,Fidelity Growth Company Fund,active,11,707823,S000007119,C000019448,retail / Investor,"Public-data growth case studies; selected for comparable mandate and source coverage, not estimated alpha"
+FOCPX,Fidelity OTC Portfolio,active,7,754510,S000007191,C000019679,retail / Investor,"Public-data growth case studies; selected for comparable mandate and source coverage, not estimated alpha"
+PRGFX,T. Rowe Price Growth Stock Fund,active,12,80257,S000002087,C000005453,retail / Investor,"Public-data growth case studies; selected for comparable mandate and source coverage, not estimated alpha"
+TRBCX,T. Rowe Price Blue Chip Growth Fund,active,12,902259,S000002069,C000005424,retail / Investor,"Public-data growth case studies; selected for comparable mandate and source coverage, not estimated alpha"
+VFIAX,Vanguard 500 Index Fund Admiral Shares,index,12,36405,S000002839,C000007774,Admiral,"Public-data growth case studies; selected for comparable mandate and source coverage, not estimated alpha"
+VIGAX,Vanguard Growth Index Fund Admiral Shares,index,12,36405,S000002842,C000007784,Admiral,"Public-data growth case studies; selected for comparable mandate and source coverage, not estimated alpha"
+VVIAX,Vanguard Value Index Fund Admiral Shares,index,12,36405,S000002840,C000007776,Admiral,"Public-data growth case studies; selected for comparable mandate and source coverage, not estimated alpha"
+VSMAX,Vanguard Small-Cap Index Fund Admiral Shares,index,12,36405,S000002845,C000007796,Admiral,"Public-data growth case studies; selected for comparable mandate and source coverage, not estimated alpha"

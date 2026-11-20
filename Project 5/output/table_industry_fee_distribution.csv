@@ -1,0 +1,3 @@
+category,year,p10_pct,median_pct,p90_pct,asset_weighted_mean_pct,simple_mean_pct,source_url
+Equity mutual funds,2025,0.51,0.99,1.84,0.4,1.08,https://www.ici.org/system/files/2026-03/per32-01.pdf
+Growth,2025,0.6,0.98,1.75,0.57,1.06,https://www.ici.org/system/files/2026-03/per32-01.pdf

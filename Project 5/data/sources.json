@@ -1,0 +1,78 @@
+{
+  "as_of": "2026-11-20",
+  "analysis_start": "2016-01",
+  "analysis_end": "2025-12",
+  "return_buffer_start": "2015-01",
+  "yahoo": {
+    "endpoint": "https://query1.finance.yahoo.com/v8/finance/chart/{ticker}",
+    "period1": 1417392000,
+    "period2": 1767225600,
+    "interval": "1d",
+    "events": "div,splits,capitalGains",
+    "fields": [
+      "timestamp",
+      "quote.close",
+      "adjclose.adjclose",
+      "events"
+    ],
+    "note": "Yahoo close and historical distributions are already split adjusted; do not apply split events again. Cash distribution event buckets may include both income and capital gains."
+  },
+  "factors": {
+    "ff3": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+    "momentum": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Momentum_Factor_CSV.zip",
+    "vintage": "202609 CRSP database as identified by both downloaded files",
+    "raw_units": "percent per month"
+  },
+  "financial_highlights": "Programmatic extraction of selected fund/class financial-highlight tables; original row strings and source links preserved in financial_highlights_sources.json.",
+  "ici": {
+    "url": "https://www.ici.org/system/files/2026-03/per32-01.pdf",
+    "figure": 2,
+    "printed_page": 2,
+    "weighting": "Percentiles equally weight each share class; asset-weighted mean is a different statistic."
+  },
+  "flow_limitations": "Annual class TNA is available for all five funds. Public NPORT series assets are quarterly, not a continuous monthly class TNA panel. Actual reported monthly external flows and class returns are available for the two T. Rowe registrants; series flows cannot be relabelled as retail-class flows.",
+  "professor_update": "User supplied instructor clarification: no paid data expected; explore free sources and disclose data limitations. No CRSP Mutual Fund or Bloomberg access.",
+  "files": {
+    "factors_percent.csv": {
+      "sha256": "31841989bbe21414deebfc8fb7779c9a797b11fc07734e990bbb63068ef2e5d7",
+      "bytes": 4025
+    },
+    "financial_highlights_raw.csv": {
+      "sha256": "ec9b7f206d540482086b7712e372228bc363362d360964f752150a3f8494815f",
+      "bytes": 9680
+    },
+    "financial_highlights_sources.json": {
+      "sha256": "9b277c512df7cb0aa1307dda344bfc76acd576ee349c30ee4fb275a7a44ef942",
+      "bytes": 70562
+    },
+    "funds.csv": {
+      "sha256": "7b633cd5afdfdca4fabd2d2d62fa49e29acd5273d2e50ffc74216b8a4f60bd61",
+      "bytes": 1881
+    },
+    "ici_fee_distribution.csv": {
+      "sha256": "f76de7c552026eb24be835858c860b31e29db98ea5f38d23885437268fb5f835",
+      "bytes": 285
+    },
+    "sec_monthly_class_returns.csv": {
+      "sha256": "1515de6e9e8956613d8a4ec513130148696a199dd10790b262937d13e659208e",
+      "bytes": 17511
+    },
+    "sec_quarterly_series_assets.csv": {
+      "sha256": "1e2fd8a81c0bcaf0f8535fa5abd1843e24cbdbe4dca67b3683436f080d874188",
+      "bytes": 6574
+    },
+    "sec_reported_monthly_flows.csv": {
+      "sha256": "234fa8d58b86df031e0a0146929b54e9ee4e4de4d37da6c3fc0c83a3eedabde4",
+      "bytes": 25584
+    },
+    "yahoo_actions.csv": {
+      "sha256": "e46f720bd36871382575f6c8ff2d9a15988925024602e5832ffcd055669a96da",
+      "bytes": 8804
+    },
+    "yahoo_daily.csv": {
+      "sha256": "e4b5d483d5bed1632a9a4038fe2164822114c4d4300ccc61519db7c011e39580",
+      "bytes": 1323439
+    }
+  },
+  "extract_trimming": "Daily NAVs retain December 31, 2014 as the prior NAV, then 2015\u20132025. Cash events start January 2015. Factors retain only 2016\u20132025. Financial-highlight fiscal years start 2016. SEC class-return validation retains only the two analyzed retail classes; original series flow scope remains all classes."
+}

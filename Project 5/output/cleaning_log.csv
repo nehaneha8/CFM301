@@ -1,0 +1,11 @@
+row,dataset,step,affected,remaining,note
+0,daily NAV,Drop exact duplicate source rows,0,24903,
+1,daily NAV,"Invalid dates, missing/non-positive NAV",0,24903,
+2,actions,Drop exact duplicate event rows,0,251,
+3,daily NAV,First observation has no prior NAV,9,24894,One initial observation per fund; all analysis months have a prior NAV
+4,financial highlights,Missing expense or invalid class TNA,0,98,
+5,financial highlights,Repeated fiscal years: retain latest filed table,6,92,"Same economic observation, sometimes more precise assets in newer reports; original rows are preserved"
+6,fees,One-month last-fiscal-year approximation,1,1080,FDGRX December 2025 only; explicitly varied in sensitivity
+7,monthly returns,Flag >4 sample SD; retain valid shocks,0,600,No baseline winsorization; 1/99 cut-offs tested separately
+8,monthly panel,"Missing return, fee or factor exclusions",0,120,120 common months for every fund and all three factor models
+9,reported monthly flows,Normalize legacy signed redemptions to withdrawal magnitude,108,156,2019–2023 uses negative signs; 2024–2025 uses positive withdrawal amounts. Raw fields retained.
